@@ -1,0 +1,91 @@
+#Sum of all numbers in a list
+def sum(numbers):
+    total=0
+    for x in numbers:
+        total = total + x
+    return total
+print(sum((8,2,0,7)))
+
+
+#multiplication of all numbers in a list
+def multiply(numbers):
+    total = 1
+    for x in numbers:
+        total*= x
+    return total
+print(multiply((5,4,3,2,1)))
+
+
+#to reverse of a string
+def reverse(string):
+    string = string[::-1]
+    return string
+print(reverse("1234abcd"))
+
+
+#to find largest of three numbers
+def largest(num1,num2,num3):
+    if (num1 >= num2) and (num1 >= num3):
+        largest = num1
+    elif (num2 >= num1) and (num2 >= num3):
+        largest = num2
+    else:
+        largest = num3
+    return largest
+print(largest(300,400,500))
+
+
+#to calculate factorial of a number
+def factorial(num):
+    if num == 0:
+        return 1
+    else:
+        return num*factorial(num-1)
+print(factorial(5))
+
+
+#to check whether a number is prime or not
+def prime(n):
+    if n<=1:
+        return False
+    for i in range(2,n):
+        if n%i==0:
+            return False
+    return True
+num = int(input("enter a number"))
+if prime(num):
+    print(num, "is a prime number")
+else:
+    print(num, "is not a prime number")
+
+
+#to check for even number in a given list
+def even(numbers):
+    even_numbers = []
+    for x in numbers:
+        if x%2 == 0:
+            return True
+        else:
+            return False
+num = [1,2,3,4,5,6]
+for n in num:
+    if even(n):
+        print(n, "is an even number")
+    else:
+        print(n, "is not an even number")
+
+
+#to check for palindrome
+def palindrome(string):
+    if string == string[::-1]:
+        return True
+    else:
+        return False
+print(palindrome("malayalam"))
+
+
+#lambda function to find square of a number
+my_nums = [1,2,3,4,5]
+list(map(lambda x: x**2, my_nums))
+nums = [1,2,3,4,5,6,6,7,8,9,10]
+list(filter(lambda x: (x%2 == 0), nums))
