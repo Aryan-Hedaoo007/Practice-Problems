@@ -1,0 +1,140 @@
+my_dict = {
+    1: 10,
+    2: 20
+}
+my_dict[3] = 30
+print(my_dict)
+
+
+#conactenation of two dictionaries
+dict1 = {'a':1,'b':2}
+dict2 = {'c':3,'d':4}
+dict3 = {}
+dict3.update(dict1)
+dict3.update(dict2)
+print(dict3)
+
+
+#check if a given key exists in a dictionary
+my_dict = {0:10, 1:20, 2:30, 3:40, 4:50, 5:60, 6:70, 7:80, 8:90, 9:100}
+key = int(input("enter a key to search:"))
+if key in my_dict:
+    print("Key exists in the dictionary")
+else:
+    print("Key does not exist in the dictionary")
+
+
+#print keys alone, values alone, and key value pair
+my_dict = {0:10, 1:20, 2:30, 3:40, 4:50, 5:60, 6:70, 7:80, 8:90, 9:100}
+for key in my_dict.keys():
+    print(key)
+for value in my_dict.values():
+    print(value)
+for key,value in my_dict.items():
+    print(key,value)
+
+
+#dictionary where values are square of keys
+my_dict = {}
+for i in range(1,16):
+    my_dict[i] = i*i
+print(my_dict)
+
+
+#sum of all values in a dictionary
+my_dict = {0:10, 1:20, 2:30, 3:40, 4:50, 5:60, 6:70, 7:80, 8:90, 9:100}
+total = 0
+for value in my_dict.values():
+    total+= value
+print("Sum of all values in the dictionary is:",total)
+
+
+#Student information
+student = {
+    101: "Naman",
+    102: "Raj",
+    103: "Rahul",
+    104: "Soniya"
+}
+print("orginal dictionary:",student)
+student[105] = "Rohit"
+print("dictionary after adding new student:",student)
+del student[102]
+print("dictionary after removing a student:",student)
+print("Student information:")
+for roll_no, name in student.items():
+    print("Roll No:",roll_no,"Name:",name)
+
+
+#List to dictionary conversion
+list1 = [1,2,3,4,5]
+list2 = ['a','b','c','d','e']
+my_dict = dict(zip(list1,list2))
+print(my_dict)
+
+
+#Dictionary to list conversion
+my_dict = {0:'zero', 1:'one', 2:'two', 3:'three', 4:'four'}
+keys_list = list(my_dict.keys())
+values_list = list(my_dict.values())
+print("Keys as a list:", keys_list)
+print("Values as a list:", values_list)
+
+
+#Mean of values in a dictionary
+my_dict = {0:10, 1:20, 2:30, 3:40, 4:50, 5:60, 6:70, 7:80, 8:90, 9:100}
+total = 0
+count = 0
+for value in my_dict.values():
+    total+= value
+    count+=1
+mean = total/count
+print("Mean of values in the dictionary is:",mean)
+
+
+#sort dictionary using sorted function
+my_dict = {'name': "Alice", 'age': 30, 'city': "New York"}
+sorted_dict = sorted(my_dict)
+print("Sorted dictionary keys:", sorted_dict)
+
+
+#Student with highest marks
+student = {
+    'Neha': 85,
+    'Aryan': 80,
+    'Raju':71,
+    'Simran': 50,
+    'Ravi': 65
+}
+highest_student  = max(student, key=student.get)
+print("Student with highest marks:",highest_student)
+print("Highest marks:",student[highest_student])
+
+
+#Frequency of each element in a list using dictionary
+numbers = [10,20,30,10,40,30,20,10,50,10]
+freq = {}
+for num in numbers:
+    if num in freq:
+        freq[num]=freq[num]+1
+    else:
+        freq[num]=1
+print("Frequency of elements:",freq)
+
+
+#Sort dictionary by values
+my_dict = { 
+"Amit": 85, 
+"Rahul": 72,
+ "Priya": 95, 
+"Sneha": 80 
+} 
+sorted_dict = dict(sorted(my_dict.items(),key=lambda item:item[1]))
+print("Dictionary sorted by values:")
+print(sorted_dict)
+
+
+#Descending order
+sorted_dict1 = dict(sorted(my_dict.items(),key=lambda item:item[1], reverse = True))
+print(sorted_dict1)
+
